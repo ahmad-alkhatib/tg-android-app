@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackgroundWhite"
+    android:orientation="vertical">
+
+    <app.core.custom.TopHeader
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hideStatusBar="true"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <View style="@style/themeDivider" />
+
+    <!--
+    app:elevation="0dp"
+    android:elevation="0dp"
+    app:itemIconTint="@null"
+    -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@android:color/transparent"
+        android:theme="@style/BottomNavigationTheme"
+        app:itemRippleColor="@null"
+        app:itemTextAppearanceActive="@style/BottomNavigationTheme.Active"
+        app:itemTextAppearanceInactive="@style/BottomNavigationTheme.InActive"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/home_menu" />
+</LinearLayout>

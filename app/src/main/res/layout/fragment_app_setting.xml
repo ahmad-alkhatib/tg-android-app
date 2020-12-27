@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <app.core.custom.TopHeader
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hideStatusBar="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackgroundWhite"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/permissionSettingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textTitleMedium"
+                    android:layout_marginLeft="@dimen/large"
+                    android:layout_marginTop="@dimen/large"
+                    android:layout_marginRight="@dimen/large"
+                    android:text="@string/permission" />
+
+                <TextView
+                    style="@style/textRegular"
+                    android:layout_marginLeft="@dimen/large"
+                    android:layout_marginTop="@dimen/general"
+                    android:layout_marginRight="@dimen/large"
+                    android:text="@string/these_permissions_set_to_allow_other_users_to_activate" />
+
+                <app.uicomponents.CustomSettingToggle
+                    android:id="@+id/chatPermission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/general"
+                    app:text="@string/chat" />
+
+                <app.uicomponents.CustomSettingToggle
+                    android:id="@+id/audioCallPermission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:text="@string/audio_call" />
+
+                <app.uicomponents.CustomSettingToggle
+                    android:id="@+id/videoCallPermission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:text="@string/video_call" />
+
+                <app.uicomponents.CustomSettingToggle
+                    android:id="@+id/emailPermission"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:text="@string/email" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/settingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/textTitleMedium"
+                    android:layout_marginLeft="@dimen/large"
+                    android:layout_marginTop="@dimen/large"
+                    android:layout_marginRight="@dimen/large"
+                    android:text="@string/app_language" />
+
+                <RadioGroup
+                    android:id="@+id/segmentGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/segment_height"
+                    android:layout_marginLeft="@dimen/large"
+                    android:layout_marginTop="@dimen/medium"
+                    android:layout_marginRight="@dimen/large"
+                    android:layout_marginBottom="@dimen/large"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/englishRadioBtn"
+                        style="@style/segmentButton"
+                        android:background="@drawable/segmented_btn_left"
+                        android:text="@string/english" />
+
+                    <RadioButton
+                        android:id="@+id/arabicRadioBtn"
+                        style="@style/segmentButton"
+                        android:background="@drawable/segmented_btn_right"
+                        android:fontFamily="@font/bold_arabic"
+                        android:text="@string/arabic" />
+                </RadioGroup>
+
+                <View style="@style/themeDivider" />
+
+                <app.uicomponents.CustomActionView
+                    android:id="@+id/aboutUsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:text="@string/about_us"
+                    app:url="@string/url_about_us" />
+
+                <app.uicomponents.CustomActionView
+                    android:id="@+id/termsAndConditionBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:text="@string/terms_and_conditions"
+                    app:url="@string/url_terms_and_condition" />
+
+                <app.uicomponents.CustomActionView
+                    android:id="@+id/privacyPolicyBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:text="@string/privacy_policy"
+                    app:url="@string/url_privacy_policy" />
+
+                <app.uicomponents.CustomActionView
+                    android:id="@+id/feedbackBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:text="@string/feedback"
+                    app:url="@string/email_feedback" />
+
+                <app.uicomponents.CustomActionView
+                    android:id="@+id/shareAppBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/extra_large"
+                    app:hideIcon="true"
+                    app:text="@string/share_app"
+                    app:url="@string/app_link" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

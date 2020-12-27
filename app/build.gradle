@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+	compileSdkVersion Versions.compileSdk
+	buildToolsVersion Versions.buildToolVersion
+
+	signingConfigs {
+		prod {
+			storeFile file('...')
+			keyAlias ""
+			storePassword ""
+			keyPassword ""
+		}
+		nonProd {
+			storeFile file('../keystore/tg_debug_key.jks')
+			keyAlias "tg_app"
+			storePassword "tgark123"
+			keyPassword "tgark123"
+		}
+	}
+
+	defaultConfig {
+		applicationId "com.tolerancegate.android"
+		multiDexEnabled true
+		minSdkVersion Versions.minSdk
+		targetSdkVersion Versions.targetSdk
+		versionCode 1
+		versionName '1.0.0'
+	}
+
+	buildTypes {
+		debug {
+			applicationIdSuffix ".debug"
+			debuggable true
+			signingConfig signingConfigs.nonProd
+		}
+
+		release {
+			signingConfig signingConfigs.nonProd
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+		}
+	}
+
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+}
+
+apply from: Plugins.filePathDagger
+apply from: Plugins.filePathKotlin
+
+dependencies {
+	implementation project(Modules.core)
+	implementation Dependencies.facebook_sdk
+	implementation Dependencies.parse_facebook_sdk
+	implementation 'androidx.recyclerview:recyclerview:1.1.0'
+	implementation 'com.github.marlonlom:timeago:4.0.3'
+}

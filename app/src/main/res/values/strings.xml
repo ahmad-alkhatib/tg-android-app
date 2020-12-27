@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tolerance Gate</string>
+
+    <string name="email_institution_ads" translatable="false">support@tolerancegate.com</string>
+    <string name="email_feedback" translatable="false">support@tolerancegate.com</string>
+    <string name="url_privacy_policy" translatable="false">https://tolerancegate.b4a.app/Privacy%20Policy.pdf</string>
+    <string name="url_" translatable="false">institutionAdsEmail</string>
+    <string name="url_about_us" translatable="false">https://tolerancegate.b4a.app/About%20Tolerance%20Gate.pdf</string>
+    <string name="url_terms_and_condition" translatable="false"><![CDATA[https://tolerancegate.b4a.app/TG%20Terms%20&%20Conditions.pdf]]></string>
+    <string name="app_link" translatable="false">https://itunes.apple.com/app/id1533844727</string>
+</resources>

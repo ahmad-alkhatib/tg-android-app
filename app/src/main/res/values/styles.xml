@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="fullScreenDialog">
+        <item name="android:windowBackground">@color/windowBackgroundWhite</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+    </style>
+
+    <style name="StateListDialogTheme" parent="FullScreenTransparentDialogFragment">
+        <item name="android:windowAnimationStyle">@style/DialogInOutAnimation</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <style name="DialogInOutAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/anim_bottom_to_top_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_top_to_bottom_out</item>
+    </style>
+
+    <style name="FullScreenTransparentDialogFragment" parent="fullScreenDialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="BottomNavigationTheme" parent="Theme.MaterialComponents.Light">
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="BottomNavigationTheme.InActive" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">@dimen/text_size_extra_small</item>
+        <item name="android:textColor">@color/colorTextLighter</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:fontFamily">@font/medium</item>
+    </style>
+
+    <style name="BottomNavigationTheme.Active" parent="Widget.Design.BottomNavigationView">
+        <item name="android:textSize">@dimen/text_size_extra_small</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/window_bg_round_corner</item>
+    </style>
+
+</resources>

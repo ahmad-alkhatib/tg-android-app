@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackgroundWhite"
+    android:orientation="vertical">
+
+    <app.core.custom.TopHeader
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showLeftIcon="true"
+        app:title="@string/new_user_registration" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/large"
+            android:layout_marginRight="@dimen/large"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/segmentGroup"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/segment_height"
+                android:layout_marginTop="@dimen/medium"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RadioButton
+                    android:id="@+id/studentRadioBtn"
+                    style="@style/segmentButton"
+                    android:background="@drawable/segmented_btn_left"
+                    android:checked="true"
+                    android:text="@string/student" />
+
+                <RadioButton
+                    android:id="@+id/instructorRadioBtn"
+                    style="@style/segmentButton"
+                    android:background="@drawable/segmented_btn_center"
+                    android:fontFamily="@font/bold_arabic"
+                    android:text="@string/instructor" />
+
+                <RadioButton
+                    android:id="@+id/institutionRadioBtn"
+                    style="@style/segmentButton"
+                    android:background="@drawable/segmented_btn_right"
+                    android:fontFamily="@font/bold_arabic"
+                    android:text="@string/institution" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/ptHeadingLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/textTitleLargeBold"
+                    android:text="@string/private_tutoring"
+                    app:drawableStartCompat="@drawable/icon_private_tutor" />
+
+                <TextView
+                    style="@style/textRegular"
+                    android:layout_marginTop="@dimen/small"
+                    android:text="@string/thousands_of_people_are_registering_for_private_tutoring_every_year." />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/userProfileImage"
+                android:layout_width="@dimen/user_profile_image_h_w"
+                android:layout_height="@dimen/user_profile_image_h_w"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/large"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/image_profile_placeholder" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/instituteLogoImageCard"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/large"
+                android:elevation="0dp"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="0dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/instituteLogoImage"
+                    android:layout_width="@dimen/logo_image_width"
+                    android:layout_height="@dimen/logo_image_height"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/image_placeholder" />
+
+            </androidx.cardview.widget.CardView>
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editFullName"
+                style="@style/ediTextLayoutStyle"
+                android:inputType="textCapWords"
+                app:errorTextMessage="@string/please_enter_the_name"
+                app:hintText="@string/full_name"
+                app:startIcon="@drawable/icon_name" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editAboutInstitution"
+                style="@style/ediTextLayoutStyle"
+                android:inputType="textCapSentences"
+                app:hintText="@string/institution_about"
+                app:multiline="true"
+                app:optional="true"
+                app:startIcon="@drawable/icon_comment_note" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editEmail"
+                style="@style/ediTextLayoutStyle"
+                android:inputType="textEmailAddress"
+                app:errorTextMessage="@string/please_enter_a_valid_email_address"
+                app:hintText="@string/email"
+                app:startIcon="@drawable/icon_email" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editPassword"
+                style="@style/ediTextLayoutStyle"
+                android:inputType="textPassword"
+                app:errorTextMessage="@string/please_enter_your_password"
+                app:hintText="@string/password"
+                app:startIcon="@drawable/icon_password" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editNumber"
+                style="@style/ediTextLayoutStyle"
+                android:inputType="number"
+                app:errorTextMessage="@string/please_enter_the_mobile_number"
+                app:hintText="@string/mobile_optional"
+                app:startIcon="@drawable/icon_phone" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editGender"
+                style="@style/ediTextLayoutStyle"
+                app:className="@string/class_gender"
+                app:dropdownPicker="true"
+                app:errorTextMessage="@string/please_select_a_gender"
+                app:hintText="@string/gender"
+                app:screenTitle="@string/gender"
+                app:startIcon="@drawable/icon_gender" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editCountry"
+                style="@style/ediTextLayoutStyle"
+                app:className="@string/class_country"
+                app:dropdownPicker="true"
+                app:errorTextMessage="@string/please_select_a_country"
+                app:hintText="@string/country"
+                app:screenTitle="@string/country"
+                app:startIcon="@drawable/icon_country" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editCity"
+                style="@style/ediTextLayoutStyle"
+                app:className="@string/class_city"
+                app:dropdownPicker="true"
+                app:errorTextMessage="@string/please_select_a_city"
+                app:hintText="@string/city"
+                app:screenTitle="@string/city"
+                app:startIcon="@drawable/icon_city_pin" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editDegree"
+                style="@style/ediTextLayoutStyle"
+                app:className="@string/class_degree"
+                app:dropdownPicker="true"
+                app:errorTextMessage="@string/please_select_a_degree"
+                app:hintText="@string/degree"
+                app:screenTitle="@string/degree"
+                app:startIcon="@drawable/icon_degree" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editProgramStudy"
+                style="@style/ediTextLayoutStyle"
+                app:className="@string/class_program"
+                app:dropdownPicker="true"
+                app:errorTextMessage="@string/please_select_a_program"
+                app:hintText="@string/program_of_study_optional"
+                app:screenTitle="@string/program"
+                app:startIcon="@drawable/icon_subject" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editSpecialization"
+                style="@style/ediTextLayoutStyle"
+                android:inputType="textCapWords"
+                app:errorTextMessage="@string/please_enter_the_specialization"
+                app:hintText="@string/specialization"
+                app:startIcon="@drawable/icon_program_tick" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editSubject"
+                style="@style/ediTextLayoutStyle"
+                app:className="@string/class_subject"
+                app:dropdownPicker="true"
+                app:errorTextMessage="@string/please_select_the_subject_taught"
+                app:hintText="@string/subject_taught"
+                app:multiSelection="true"
+                app:screenTitle="@string/subject"
+                app:startIcon="@drawable/icon_subject_search" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/ptSwitchButton"
+                style="@style/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/editText_height"
+                android:layout_marginStart="@dimen/general"
+                android:layout_marginTop="@dimen/general_large"
+                android:background="@null"
+                android:text="@string/private_tutoring"
+                android:thumb="@drawable/switch_thumb"
+                app:switchPadding="@dimen/large"
+                app:track="@drawable/switch_track" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editYearExperience"
+                style="@style/ediTextLayoutStyle"
+                android:inputType="number"
+                android:maxLength="2"
+                app:errorTextMessage="@string/please_enter_private_tutoring_information"
+                app:hintText="@string/years_of_experience"
+                app:startIcon="@drawable/icon_experience_bulp" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editFeesPerHour"
+                style="@style/ediTextLayoutStyle"
+                android:inputType="number"
+                android:maxLength="5"
+                app:errorTextMessage="@string/please_enter_private_tutoring_information"
+                app:hintText="@string/fees_per_hour"
+                app:showCurrency="true"
+                app:startIcon="@drawable/icon_dollar_fees" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editExperienceDescription"
+                style="@style/ediTextLayoutStyle"
+                android:inputType="textCapSentences"
+                app:errorTextMessage="@string/please_enter_private_tutoring_information"
+                app:hintText="@string/tutoring_experience_optional"
+                app:multiline="true"
+                app:optional="true"
+                app:startIcon="@drawable/icon_comment_note" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editTeachingMode"
+                style="@style/ediTextLayoutStyle"
+                app:className="@string/class_teaching_mode"
+                app:dropdownPicker="true"
+                app:errorTextMessage="@string/please_enter_private_tutoring_information"
+                app:hintText="@string/teaching_mode"
+                app:multiSelection="true"
+                app:screenTitle="@string/private_tutoring"
+                app:startIcon="@drawable/icon_mode" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editSeeksToLear"
+                style="@style/ediTextLayoutStyle"
+                app:className="@string/class_subject"
+                app:dropdownPicker="true"
+                app:errorTextMessage="@string/please_enter_private_tutoring_information"
+                app:hintText="@string/seeks_to_learn"
+                app:multiSelection="true"
+                app:screenTitle="@string/subject"
+                app:startIcon="@drawable/icon_subject_search" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editTuitionType"
+                style="@style/ediTextLayoutStyle"
+                app:className="@string/class_teaching_mode"
+                app:dropdownPicker="true"
+                app:errorTextMessage="@string/please_enter_private_tutoring_information"
+                app:hintText="@string/tuition_type"
+                app:multiSelection="true"
+                app:screenTitle="@string/private_tutoring"
+                app:startIcon="@drawable/icon_mode" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editInstitutionType"
+                style="@style/ediTextLayoutStyle"
+                app:className="@string/class_institution_type"
+                app:dropdownPicker="true"
+                app:errorTextMessage="@string/please_select_the_institution_type"
+                app:hintText="@string/institution_type"
+                app:screenTitle="@string/institution_type"
+                app:startIcon="@drawable/icon_book" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/instituteBannerImageCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/large"
+                android:elevation="0dp"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="0dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/instituteBannerImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/banner_height"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/image_placeholder" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/registerNowBtn"
+                style="@style/buttonTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large"
+                android:layout_marginBottom="@dimen/double_larger_custom"
+                android:background="@drawable/button_primary_bg_rounded"
+                android:text="@string/register_now" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

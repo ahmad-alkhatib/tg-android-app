@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_one_dp">1dp</dimen>
+    <dimen name="tiny">2dp</dimen>
+    <dimen name="small">4dp</dimen>
+    <dimen name="smaller">6dp</dimen>
+    <dimen name="general">8dp</dimen>
+    <dimen name="general_large">10dp</dimen>
+    <dimen name="medium">14dp</dimen>
+    <dimen name="large">16dp</dimen>
+    <dimen name="larger">18dp</dimen>
+    <dimen name="larger_custom">20dp</dimen>
+    <dimen name="extra_large">24dp</dimen>
+    <dimen name="extra_large_double">48dp</dimen>
+    <dimen name="extra_larger">32dp</dimen>
+    <dimen name="double_larger_custom">40dp</dimen>
+
+    <dimen name="button_start_end_padding">@dimen/larger_custom</dimen>
+    <dimen name="small_button_height">36dp</dimen>
+    <dimen name="small_action_icon_w_h">40dp</dimen>
+    <dimen name="button_drawable_padding">@dimen/general</dimen>
+
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="button_start_end_margin">80dp</dimen>
+
+    <dimen name="form_start_end_padding">32dp</dimen>
+    <dimen name="icon_width_height">120dp</dimen>
+
+    <dimen name="text_size_extra_large">32sp</dimen>
+    <dimen name="text_size_largest">28sp</dimen>
+    <dimen name="text_size_larger">24sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_title">18sp</dimen>
+    <dimen name="text_size_regular_large">17sp</dimen>
+    <dimen name="text_size_regular">16sp</dimen>
+    <dimen name="text_size_regular_small">15sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_medium_small">13sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_smaller">11sp</dimen>
+    <dimen name="text_size_extra_small">10sp</dimen>
+    <dimen name="text_size_extra_smaller">9sp</dimen>
+    <dimen name="text_line_spacing_regular">3sp</dimen>
+    <dimen name="edit_text_line_spacing_regular">6sp</dimen>
+
+    <dimen name="list_item_height">100dp</dimen>
+    <dimen name="list_item_image_width">120dp</dimen>
+    <dimen name="list_item_lecture_image_height">220dp</dimen>
+
+    <dimen name="header_action_bar_height">56dp</dimen>
+    <dimen name="header_status_bar_height">24dp</dimen>
+    <dimen name="header_height">56dp</dimen>
+    <dimen name="header_icon_width_height">38dp</dimen>
+    <dimen name="header_icon_margin">11dp</dimen>
+    <dimen name="header_icon_padding">8dp</dimen>
+
+    <dimen name="corner_radius">10dp</dimen>
+    <dimen name="editText_icon_width_height">18dp</dimen>
+    <dimen name="dropdown_icon_width_height">14dp</dimen>
+    <dimen name="editText_height">46dp</dimen>
+    <dimen name="search_field_height">40dp</dimen>
+    <dimen name="editText_multiline_height">120dp</dimen>
+
+    <dimen name="segment_stroke">1dp</dimen>
+    <dimen name="segment_height">36dp</dimen>
+
+    <dimen name="switch_radius">28dp</dimen>
+    <dimen name="switch_stroke">2dp</dimen>
+    <dimen name="switch_layout_height">52dp</dimen>
+
+    <dimen name="pt_home_image_w_h">66dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="card_elevation_item">4dp</dimen>
+    <dimen name="card_elevation_item_large">20dp</dimen>
+
+    <dimen name="user_profile_image_h_w">120dp</dimen>
+    <dimen name="logo_image_width">176dp</dimen>
+    <dimen name="logo_image_height">120dp</dimen>
+    <dimen name="institution_item_w">150dp</dimen>
+    <dimen name="institution_item_h">100dp</dimen>
+    <dimen name="item_image_w_h">80dp</dimen>
+    <dimen name="item_image_small_w_h">60dp</dimen>
+    <dimen name="banner_height">220dp</dimen>
+    <dimen name="min_list_height">80dp</dimen>
+    <dimen name="bottom_extra_space">60dp</dimen>
+</resources>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <app.core.custom.TopHeader
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hideStatusBar="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackgroundLight"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/userProfileImage"
+                    android:layout_width="@dimen/user_profile_image_h_w"
+                    android:layout_height="@dimen/user_profile_image_h_w"
+                    android:layout_marginTop="@dimen/extra_large"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/image_placeholder_user_gray" />
+
+                <TextView
+                    android:id="@+id/userNameTv"
+                    style="@style/textRegularBold"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/extra_larger"
+                    android:layout_marginTop="@dimen/general_large"
+                    android:layout_marginEnd="@dimen/extra_larger"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAlignment="center"
+                    tools:text="@string/change_password" />
+
+                <TextView
+                    android:id="@+id/descriptionTv"
+                    style="@style/textRegularSmall"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/extra_larger"
+                    android:layout_marginTop="@dimen/small"
+                    android:layout_marginEnd="@dimen/extra_larger"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textAlignment="center"
+                    android:visibility="gone"
+                    tools:text="@string/change_password"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/subjectsTv"
+                    style="@style/textSmallMedium"
+                    android:layout_width="match_parent"
+                    android:layout_marginStart="@dimen/extra_larger"
+                    android:layout_marginTop="@dimen/small"
+                    android:layout_marginEnd="@dimen/extra_larger"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:visibility="gone"
+                    tools:text="@string/change_password"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/addressTv"
+                    style="@style/textUserAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/small"
+                    android:visibility="gone"
+                    tools:text="@string/change_password"
+                    tools:visibility="visible" />
+
+                <LinearLayout
+                    android:id="@+id/buttonLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/large"
+                    android:layout_marginTop="@dimen/medium"
+                    android:layout_marginEnd="@dimen/large"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:id="@+id/followLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <app.uicomponents.CustomFollowBtn
+                            android:id="@+id/followBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:active="false"
+                            app:following="false" />
+                    </LinearLayout>
+
+                    <app.uicomponents.CustomActionBtn
+                        android:id="@+id/emailBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/smaller"
+                        app:active="false"
+                        app:icon="@drawable/icon_profile_email"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/icon3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <app.uicomponents.CustomActionBtn
+                        android:id="@+id/messageBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/smaller"
+                        app:active="false"
+                        app:icon="@drawable/icon_profile_message"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/icon2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <app.uicomponents.CustomActionBtn
+                        android:id="@+id/callBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/smaller"
+                        app:active="false"
+                        app:icon="@drawable/icon_profile_call"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/icon1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <app.uicomponents.CustomActionBtn
+                        android:id="@+id/videoCallBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:active="false"
+                        app:icon="@drawable/icon_profile_video"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/larger_custom"
+                    android:background="@drawable/window_bg_round_corner"
+                    android:elevation="@dimen/extra_larger"
+                    android:orientation="vertical"
+                    android:padding="@dimen/extra_large">
+
+                    <TextView
+                        style="@style/textTitleLargeBold"
+                        android:text="@string/private_tutoring"
+                        app:drawableStartCompat="@drawable/icon_private_tutor" />
+
+                    <LinearLayout
+                        android:id="@+id/tutorLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <TextView
+                            style="@style/textSemiSmallBold"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/large"
+                            android:text="@string/years_of_experience" />
+
+                        <TextView
+                            android:id="@+id/yearsOfExperienceTv"
+                            style="@style/textRegularSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/tiny"
+                            tools:text="@string/years_of_experience" />
+
+                        <TextView
+                            style="@style/textSemiSmallBold"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/large"
+                            android:text="@string/fees_per_hour" />
+
+                        <TextView
+                            android:id="@+id/feesPerHourTv"
+                            style="@style/textRegularSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/tiny"
+                            tools:text="@string/years_of_experience" />
+
+                        <TextView
+                            style="@style/textSemiSmallBold"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/large"
+                            android:text="@string/tutoring_experience" />
+
+                        <TextView
+                            android:id="@+id/tutoringExperienceTv"
+                            style="@style/textRegularSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/tiny"
+                            tools:text="@string/years_of_experience" />
+
+                        <TextView
+                            style="@style/textSemiSmallBold"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/large"
+                            android:text="@string/teaching_mode" />
+
+
+                        <TextView
+                            android:id="@+id/teachingModeTv"
+                            style="@style/textRegularSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/tiny"
+                            tools:text="@string/years_of_experience" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/studentLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <TextView
+                            style="@style/textSemiSmallBold"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/large"
+                            android:text="@string/seeks_to_learn" />
+
+                        <TextView
+                            android:id="@+id/seeksToLearnTv"
+                            style="@style/textRegularSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/tiny"
+                            tools:text="@string/years_of_experience" />
+
+                        <TextView
+                            style="@style/textSemiSmallBold"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/large"
+                            android:text="@string/tuition_type" />
+
+                        <TextView
+                            android:id="@+id/tuitionTypeTv"
+                            style="@style/textRegularSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_marginTop="@dimen/tiny"
+                            tools:text="@string/years_of_experience" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/menuIcon"
+                android:layout_width="@dimen/header_icon_width_height"
+                android:layout_height="@dimen/header_icon_width_height"
+                android:layout_margin="@dimen/large"
+                android:background="?actionBarItemBackground"
+                android:padding="@dimen/header_icon_padding"
+                android:scaleType="fitCenter"
+                android:tint="@color/colorPrimary"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/nav_setting_dots"
+                tools:visibility="visible" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

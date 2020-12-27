@@ -1,0 +1,13 @@
+apply from: '../centeralized.gradle'
+apply from: '../dependencies/dagger.gradle'
+apply from: '../dependencies/kotlin.gradle'
+
+dependencies {
+    implementation project(Modules.di)
+//    implementation project(Modules.daos)
+//    implementation project(Modules.translations)
+//    implementation Dependencies.retrofit_gson
+    implementation Dependencies.glide
+
+//    implementation 'jp.wasabeef:glide-transformations:4.1.0'
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/editText_height"
+    android:background="@drawable/textfield_bg"
+    android:gravity="center_vertical"
+    android:padding="@dimen/common_one_dp"
+    android:weightSum="1">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iconStart"
+        android:layout_width="@dimen/editText_icon_width_height"
+        android:layout_height="@dimen/editText_icon_width_height"
+        android:layout_marginStart="@dimen/large" />
+
+    <TextView
+        style="@style/editTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/general"
+        android:gravity="center"
+        android:paddingStart="@dimen/smaller"
+        android:paddingEnd="0dp"
+        android:tag="currencyTextView"
+        android:text="$"
+        android:visibility="gone" />
+
+    <EditText
+        style="@style/editTextTheme"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:tag="inputEditText"
+        android:visibility="gone" />
+
+    <TextView
+        style="@style/editTextTheme"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:tag="inputTextField"
+        android:visibility="gone" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iconEnd"
+        android:layout_width="@dimen/dropdown_icon_width_height"
+        android:layout_height="@dimen/dropdown_icon_width_height"
+        android:layout_marginEnd="@dimen/large"
+        android:visibility="gone" />
+
+</LinearLayout>

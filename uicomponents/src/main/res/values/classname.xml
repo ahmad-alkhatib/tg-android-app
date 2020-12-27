@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="class_gender" translatable="false">Gender</string>
+    <string name="class_country" translatable="false">Country</string>
+    <string name="class_city" translatable="false">City</string>
+    <string name="class_degree" translatable="false">Degree</string>
+    <string name="class_program" translatable="false">Program</string>
+    <string name="class_subject" translatable="false">Subject</string>
+    <string name="class_teaching_mode" translatable="false">PrivateTutoringType</string>
+    <string name="class_institution_type" translatable="false">InstitutionType</string>
+</resources>

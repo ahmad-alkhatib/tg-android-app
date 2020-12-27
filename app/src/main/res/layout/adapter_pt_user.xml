@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/itemImage"
+        android:layout_width="@dimen/item_image_w_h"
+        android:layout_height="@dimen/item_image_w_h"
+        android:layout_marginStart="@dimen/general_large"
+        android:layout_marginTop="@dimen/medium"
+        android:layout_marginEnd="@dimen/general_large"
+        android:layout_marginBottom="@dimen/small"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image_placeholder_user_gray" />
+
+    <TextView
+        android:id="@+id/userTypeTv"
+        style="@style/textSmaller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small"
+        android:layout_marginEnd="@dimen/small"
+        android:maxLines="1"
+        android:minLines="1"
+        android:textAlignment="center"
+        android:textColor="@color/colorWhite" />
+
+    <TextView
+        android:id="@+id/itemTv"
+        style="@style/textItemMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/smaller"
+        android:layout_marginEnd="@dimen/smaller"
+        android:layout_marginBottom="@dimen/medium"
+        android:maxLines="1"
+        android:minLines="1"
+        android:textColor="@color/colorWhite" />
+
+</LinearLayout>

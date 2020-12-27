@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#485793</color>
+    <color name="colorPrimaryLight">#98B2F3</color>
+    <color name="colorPrimaryDark">#292A76</color>
+    <color name="colorAccent">#E87774</color>
+    <color name="colorAccentLight">#EB9E96</color>
+    <color name="colorGolden">#BEA149</color>
+    <color name="colorGreen">#AABD44</color>
+    <color name="colorGreenFollowing">#7DCB28</color>
+
+    <color name="windowBackgroundWhite">#FFFFFF</color>
+    <color name="windowBackgroundLight">#F0F8FD</color>
+    <color name="windowBackgroundBlue">#DAEDFA</color>
+
+    <color name="colorBlack">@android:color/black</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="colorWhite">@android:color/white</color>
+    <color name="colorWhiteLight">#F7F7F7</color>
+
+    <color name="colorButtonHoverRippleDark">#5C000000</color>
+    <color name="colorButtonHoverRipple">#29000000</color>
+    <color name="colorButtonHoverRippleLight">#14000000</color>
+    <color name="colorButtonPrimary">#485793</color>
+    <color name="colorButtonFacebook">#245B9E</color>
+    <color name="colorButtonPink">@color/colorAccent</color>
+    <color name="colorButtonGolden">@color/colorGolden</color>
+    <color name="colorButtonGreen">@color/colorGreen</color>
+
+    <color name="colorTextPrimary">@color/colorPrimary</color>
+    <color name="colorTextPrimaryDark">@color/colorPrimaryDark</color>
+    <color name="colorTextPrimaryLight">@color/colorPrimaryLight</color>
+    <color name="colorTextPrimaryLighter">#DAEEFB</color>
+    <color name="colorTextDark">#333333</color>
+    <color name="colorTextLight">#666666</color>
+    <color name="colorTextLighter">#999999</color>
+
+    <color name="colorEditText">@color/colorTextDark</color>
+    <color name="colorEditTextHint">@color/colorTextLighter</color>
+
+    <color name="colorDivider">#1A000000</color>
+    <color name="colorOutLine">#D5D5D5</color>
+    <color name="colorOutLineLight">#DFDFDF</color>
+
+    <color name="colorSegment">@color/colorOutLineLight</color>
+    <color name="colorSegmentStroke">@color/colorPrimary</color>
+    <color name="colorSegmentSelected">@color/colorWhite</color>
+
+    <color name="switch_track">@color/colorWhite</color>
+    <color name="switch_disable_bg">@color/colorOutLineLight</color>
+    <color name="switch_enable_bg">@color/colorAccent</color>
+    <color name="colorRed">#DA1F1F</color>
+</resources>

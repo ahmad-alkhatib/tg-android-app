@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/large"
+    android:paddingTop="@dimen/general_large"
+    android:paddingBottom="@dimen/small">
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="@dimen/item_image_w_h"
+        android:layout_height="@dimen/item_image_w_h"
+        android:background="@drawable/default_item_profile_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/tv1"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/general_large"
+        android:layout_marginStart="@dimen/general"
+        android:layout_marginTop="@dimen/smaller"
+        android:layout_marginEnd="@dimen/general"
+        android:background="@drawable/default_item_text"
+        app:layout_constraintEnd_toEndOf="@+id/topView"
+        app:layout_constraintStart_toStartOf="@+id/topView"
+        app:layout_constraintTop_toBottomOf="@+id/topView" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="@dimen/general_large"
+        android:layout_marginStart="@dimen/small"
+        android:layout_marginTop="@dimen/tiny"
+        android:layout_marginEnd="@dimen/small"
+        android:background="@drawable/default_item_text"
+        app:layout_constraintEnd_toEndOf="@+id/tv1"
+        app:layout_constraintStart_toStartOf="@+id/tv1"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

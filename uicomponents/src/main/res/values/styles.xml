@@ -1,0 +1,372 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentTransitions">true</item>
+    </style>
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="colorPrimaryDark">@color/windowBackgroundBlue</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/windowBackgroundBlue</item>
+    </style>
+
+    <style name="ThemeTransparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsFloating">true</item>
+        <!--        <item name="android:backgroundDimEnabled">false</item>-->
+    </style>
+
+    <style name="editTextTheme">
+        <item name="android:paddingStart">@dimen/large</item>
+        <item name="android:paddingEnd">@dimen/large</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:lineSpacingExtra">@dimen/edit_text_line_spacing_regular</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textColor">@color/colorEditText</item>
+        <item name="android:textColorHint">@color/colorEditTextHint</item>
+        <item name="android:textSize">@dimen/text_size_regular_small</item>
+        <item name="android:fontFamily">@font/edittext</item>
+    </style>
+
+    <style name="editTextSearchTheme" parent="editTextTheme">
+        <item name="android:drawablePadding">@dimen/general_large</item>
+        <item name="android:drawableStart">@drawable/icon_search</item>
+        <item name="android:layout_margin">@dimen/general</item>
+        <item name="android:background">@drawable/search_bg_rounded</item>
+        <item name="android:layout_height">@dimen/search_field_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:inputType">textCapWords</item>
+        <item name="android:hint">@string/search</item>
+    </style>
+
+    <style name="buttonTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_marginTop">@dimen/general_large</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/bold</item>
+        <item name="android:stateListAnimator">@null</item>
+        <item name="android:background">@drawable/button_primary_bg</item>
+    </style>
+
+    <style name="buttonSmallTheme" parent="buttonTheme">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_height">@dimen/small_button_height</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_medium_small</item>
+        <item name="android:paddingStart">@dimen/button_start_end_padding</item>
+        <item name="android:paddingEnd">@dimen/button_start_end_padding</item>
+        <item name="android:drawablePadding">@dimen/button_drawable_padding</item>
+    </style>
+
+    <style name="buttonFollowTheme" parent="buttonSmallTheme">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_height">@dimen/small_action_icon_w_h</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:drawableStart">@drawable/icon_profile_follow</item>
+        <item name="android:paddingStart">@dimen/general_large</item>
+        <item name="android:paddingEnd">@dimen/general_large</item>
+        <item name="android:drawablePadding">@dimen/button_drawable_padding</item>
+    </style>
+
+    <style name="semiTransButtonTheme" parent="buttonTheme">
+        <item name="android:background">@drawable/button_semi_trans_bg_rounded</item>
+        <item name="android:layout_marginTop">0dp</item>
+    </style>
+
+    <style name="actionTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/small</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:padding">@dimen/smaller</item>
+        <item name="android:textColor">@color/colorTextDark</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:fontFamily">@font/medium</item>
+    </style>
+
+    <style name="headerTextView">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/smaller</item>
+        <item name="android:gravity">center</item>
+        <item name="maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/text_size_regular_large</item>
+        <item name="android:fontFamily">@font/medium</item>
+    </style>
+
+    <style name="segmentButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="maxLines">1</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:button">@android:color/transparent</item>
+        <item name="android:textColor">@drawable/segmented_txt</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+
+    <style name="textTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textColor">@color/colorTextDark</item>
+        <item name="android:textSize">@dimen/text_size_regular</item>
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+
+    <style name="textTitleLargeBold">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/text_size_regular_large</item>
+        <item name="android:fontFamily">@font/ultra_bold</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:drawablePadding">@dimen/general</item>
+    </style>
+
+    <style name="textTitleSmallMedium" parent="textTitle">
+        <item name="android:textSize">@dimen/text_size_regular_small</item>
+        <item name="android:fontFamily">@font/medium</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="textTitleMedium" parent="textTitle">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="textRegular">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorTextDark</item>
+        <item name="android:textSize">@dimen/text_size_regular_small</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="android:lineSpacingExtra">@dimen/text_line_spacing_regular</item>
+    </style>
+
+    <style name="textRegularSmall" parent="textRegular">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="textRegularSmallMedium" parent="textRegularSmall">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:fontFamily">@font/medium</item>
+    </style>
+
+    <style name="textUserAddress" parent="textRegular">
+        <item name="android:textSize">@dimen/text_size_medium_small</item>
+        <item name="android:fontFamily">@font/medium</item>
+        <item name="android:layout_marginStart">@dimen/extra_larger</item>
+        <item name="android:layout_marginEnd">@dimen/extra_larger</item>
+        <item name="android:paddingStart">@dimen/large</item>
+        <item name="android:paddingEnd">@dimen/large</item>
+        <item name="android:paddingTop">@dimen/tiny</item>
+        <item name="android:paddingBottom">@dimen/small</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@drawable/user_address_bg</item>
+    </style>
+
+    <style name="textSmaller" parent="textRegular">
+        <item name="android:textSize">@dimen/text_size_smaller</item>
+    </style>
+
+    <style name="textSmall" parent="textRegular">
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+
+    <style name="textSmallMedium" parent="textSmall">
+        <item name="android:fontFamily">@font/medium</item>
+    </style>
+
+    <style name="textRegularMedium" parent="textRegular">
+        <item name="android:fontFamily">@font/medium</item>
+    </style>
+
+    <style name="textRegularBold" parent="textRegular">
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+
+    <style name="textSmallBold" parent="textRegular">
+        <item name="android:textSize">@dimen/text_size_medium_small</item>
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+
+    <style name="textSemiSmallBold" parent="textSmallBold">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="textDateMedium" parent="textRegular">
+        <item name="android:textSize">@dimen/text_size_medium_small</item>
+        <item name="android:fontFamily">@font/medium</item>
+        <item name="android:textColor">@color/colorTextLighter</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="textExtraSmallBold" parent="textRegular">
+        <item name="android:textSize">@dimen/text_size_extra_small</item>
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+
+    <style name="textItemMedium" parent="textRegular">
+        <item name="android:fontFamily">@font/medium</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:minLines">2</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/text_size_medium_small</item>
+        <item name="android:paddingStart">@dimen/smaller</item>
+        <item name="android:paddingEnd">@dimen/smaller</item>
+    </style>
+
+    <style name="textListItemMedium" parent="textRegular">
+        <item name="android:fontFamily">@font/medium</item>
+        <item name="android:maxLines">4</item>
+        <item name="android:minLines">1</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="textRegularAction" parent="textRegularMedium">
+        <item name="android:fontFamily">@font/medium</item>
+        <item name="android:padding">@dimen/tiny</item>
+        <item name="android:textSize">@dimen/text_size_medium_small</item>
+        <item name="android:drawableEnd">@drawable/icon_arrow_right</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:drawablePadding">@dimen/general</item>
+    </style>
+
+    <style name="themeDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/common_one_dp</item>
+        <item name="android:background">@color/colorDivider</item>
+    </style>
+
+    <style name="ediTextLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/general_large</item>
+    </style>
+
+    <!--    <style name="editTextInputLayoutTheme">-->
+    <!--        <item name="android:layout_width">match_parent</item>-->
+    <!--        <item name="layout_constraintStart_toStartOf">parent</item>-->
+    <!--        <item name="layout_constraintEnd_toEndOf">parent</item>-->
+    <!--        <item name="android:layout_height">wrap_content</item>-->
+    <!--        <item name="android:layout_marginTop">@dimen/general_large</item>-->
+    <!--        <item name="errorIconDrawable">@null</item>-->
+    <!--        <item name="hintEnabled">false</item>-->
+    <!--        <item name="boxStrokeColor">@color/aa_edittext_stroke_color</item>-->
+    <!--        <item name="boxStrokeWidth">@dimen/common_one_dp</item>-->
+    <!--        <item name="boxStrokeWidthFocused">@dimen/common_one_dp</item>-->
+    <!--        <item name="android:background">@color/transparent</item>-->
+    <!--        &lt;!&ndash;        <item name="errorTextColor">@color/colorRed</item>&ndash;&gt;-->
+    <!--        &lt;!&ndash;        <item name="boxStrokeErrorColor">@color/colorRed</item>&ndash;&gt;-->
+    <!--    </style>-->
+
+    <!--    <style name="textLargeTitleTheme">-->
+    <!--        <item name="android:layout_width">wrap_content</item>-->
+    <!--        <item name="android:layout_height">wrap_content</item>-->
+    <!--        <item name="android:textSize">@dimen/text_size_large_title</item>-->
+    <!--        <item name="android:textColor">@color/colorTextDark</item>-->
+    <!--        <item name="android:fontFamily">@font/harmonia_sans_pro_regular</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="textTitleLargeTheme">-->
+    <!--        <item name="android:layout_width">match_parent</item>-->
+    <!--        <item name="android:layout_height">wrap_content</item>-->
+    <!--        <item name="android:textSize">@dimen/text_size_large</item>-->
+    <!--        <item name="android:textColor">@color/colorTextPrimary</item>-->
+    <!--        <item name="android:gravity">center</item>-->
+    <!--        <item name="android:fontFamily">@font/harmonia_sans_pro_semi_bold</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="textRegularTheme">-->
+    <!--        <item name="android:layout_width">wrap_content</item>-->
+    <!--        <item name="android:layout_height">wrap_content</item>-->
+    <!--        <item name="android:gravity">start</item>-->
+    <!--        <item name="android:textSize">@dimen/text_size_regular</item>-->
+    <!--        &lt;!&ndash;        <item name="android:textColor">@color/colorGrey</item>&ndash;&gt;-->
+    <!--        <item name="android:fontFamily">@font/harmonia_sans_pro_regular</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="textRegularPrimaryColorTheme" parent="textRegularTheme">-->
+    <!--        <item name="android:textColor">@color/colorPrimary</item>-->
+    <!--        <item name="android:fontFamily">@font/harmonia_sans_pro_bold</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="textTitleGreenTheme">-->
+    <!--        <item name="android:layout_width">wrap_content</item>-->
+    <!--        <item name="android:layout_height">wrap_content</item>-->
+    <!--        <item name="android:textSize">@dimen/text_size_large</item>-->
+    <!--        <item name="android:textColor">@color/colorPrimary</item>-->
+    <!--        <item name="android:gravity">start</item>-->
+    <!--        <item name="android:fontFamily">@font/harmonia_sans_pro_semi_bold</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="themeShadow">-->
+    <!--        <item name="android:layout_width">match_parent</item>-->
+    <!--        <item name="android:layout_height">@dimen/space_general</item>-->
+    <!--        <item name="android:background">@drawable/image_bottom_shadow</item>-->
+    <!--    </style>-->
+
+    <style name="appCompatAlertDialogStyle" parent="Theme.MaterialComponents.Dialog.Alert">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+
+    <style name="dialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="customDialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="customDialogThemeSmall" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowMinWidthMajor">50%</item>
+        <item name="android:windowMinWidthMinor">50%</item>
+    </style>
+
+    <style name="customFullScreenDialogTheme" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="DialogNoAnimation">
+        <item name="android:windowEnterAnimation">@null</item>
+        <item name="android:windowExitAnimation">@null</item>
+    </style>
+
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/menu_home"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/menu_institutions"
+        android:icon="@drawable/menu_institutions"
+        android:title="@string/institutions" />
+
+    <item
+        android:id="@+id/menu_instructors"
+        android:icon="@drawable/menu_instructors"
+        android:title="@string/instructors" />
+
+
+    <item
+        android:id="@+id/menu_courses"
+        android:icon="@drawable/menu_courses"
+        android:title="@string/courses" />
+
+    <item
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/menu_profile"
+        android:title="@string/my_profile" />
+
+</menu>

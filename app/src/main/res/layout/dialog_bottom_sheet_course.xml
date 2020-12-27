@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/large">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        style="@style/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large"
+        android:layout_marginTop="@dimen/extra_larger"
+        android:layout_marginEnd="@dimen/large"
+        android:text="@string/course"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        style="@style/textRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large"
+        android:layout_marginTop="@dimen/general_large"
+        android:layout_marginEnd="@dimen/large"
+        android:text="@string/please_select_one_of_the_options"
+        android:textAlignment="center" />
+
+    <View
+        style="@style/themeDivider"
+        android:layout_marginTop="@dimen/extra_large" />
+
+    <TextView
+        android:id="@+id/viewCourseBtn"
+        style="@style/buttonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="@drawable/button_transparent_bg"
+        android:padding="@dimen/larger_custom"
+        android:text="@string/view_course"
+        android:textColor="@color/colorPrimary" />
+
+    <View style="@style/themeDivider" />
+
+    <TextView
+        android:id="@+id/editCourseBtn"
+        style="@style/buttonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="@drawable/button_transparent_bg"
+        android:padding="@dimen/larger_custom"
+        android:text="@string/edit_course"
+        android:textColor="@color/colorPrimary" />
+
+    <View style="@style/themeDivider" />
+
+    <TextView
+        android:id="@+id/deleteCourseBtn"
+        style="@style/buttonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="@drawable/button_transparent_bg"
+        android:padding="@dimen/larger_custom"
+        android:text="@string/delete_course"
+        android:textColor="@color/colorRed" />
+
+    <View style="@style/themeDivider" />
+</LinearLayout>

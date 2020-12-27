@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackgroundLight"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/imageLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/extra_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/userProfileImage"
+                android:layout_width="@dimen/user_profile_image_h_w"
+                android:layout_height="@dimen/user_profile_image_h_w"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/image_placeholder_user_gray" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/instituteLogoImageCard"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:elevation="0dp"
+                android:visibility="invisible"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/instituteLogoImage"
+                    android:layout_width="@dimen/logo_image_width"
+                    android:layout_height="@dimen/logo_image_height"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/image_placeholder_gray" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/subscriptionBtn"
+            style="@style/buttonSmallTheme"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/general_large"
+            android:background="@drawable/button_green_bg"
+            android:padding="@dimen/smaller"
+            android:paddingStart="@dimen/general_large"
+            android:paddingEnd="@dimen/general_large"
+            android:text="@string/subscription"
+            android:textSize="@dimen/text_size_extra_small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/userNameTv"
+            style="@style/textRegularBold"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/extra_larger"
+            android:layout_marginTop="@dimen/general_large"
+            android:layout_marginEnd="@dimen/extra_larger"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="@string/change_password"
+            android:textAlignment="center"
+            app:layout_constraintTop_toBottomOf="@+id/imageLayout" />
+
+        <TextView
+            android:id="@+id/descriptionTv"
+            style="@style/textRegularSmall"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/extra_larger"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginEnd="@dimen/extra_larger"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="@string/change_password"
+            android:textAlignment="center"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/userNameTv"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/subjectsTv"
+            style="@style/textSmallMedium"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/extra_larger"
+            android:layout_marginTop="@dimen/small"
+            android:layout_marginEnd="@dimen/extra_larger"
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="@string/change_password"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionTv"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subjectsTv">
+
+            <TextView
+                android:id="@+id/myChatsBts"
+                style="@style/buttonSmallTheme"
+                android:drawableStart="@drawable/icon_profile_my_chats"
+                android:text="@string/my_chats" />
+
+            <TextView
+                android:id="@+id/myCoursesBts"
+                style="@style/buttonSmallTheme"
+                android:layout_marginStart="@dimen/general_large"
+                android:drawableStart="@drawable/icon_profile_my_course"
+                android:text="@string/my_courses"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/myAdvertiseBts"
+                style="@style/buttonSmallTheme"
+                android:layout_marginStart="@dimen/general_large"
+                android:drawableStart="@drawable/icon_profile_my_course"
+                android:text="@string/advertise"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/larger_custom"
+            android:background="@drawable/window_bg_round_corner"
+            android:elevation="@dimen/extra_larger"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLayout">
+
+            <LinearLayout
+                android:id="@+id/showPrivateTutoringBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/small_button_height"
+                android:layout_marginStart="@dimen/double_larger_custom"
+                android:layout_marginEnd="@dimen/double_larger_custom"
+                android:background="@drawable/button_golden_bg"
+                android:gravity="center"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/ptBtnText"
+                    style="@style/textSmallBold"
+                    android:layout_marginStart="@dimen/general"
+                    android:drawableStart="@drawable/icon_profile_my_pt"
+                    android:drawablePadding="@dimen/general_large"
+                    android:gravity="center"
+                    android:text="@string/view_my_private_tutoring"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+            <app.uicomponents.CustomRecyclerView
+                android:id="@+id/followersRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/followersTv"
+                app:text="@string/you_do_not_have_any_follower_at_the_moment"
+                app:title="@string/followers"
+                app:userPlaceholder="true" />
+
+            <app.uicomponents.CustomRecyclerView
+                android:id="@+id/followingRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:actionText="@string/view_instructors"
+                app:text="@string/you_are_not_following_any_instructor"
+                app:title="@string/followings"
+                app:userPlaceholder="true" />
+
+            <app.uicomponents.CustomRecyclerView
+                android:id="@+id/bookmarkedRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/bottom_extra_space"
+                app:actionText="@string/view_lectures"
+                app:text="@string/you_have_not_bookmarked_any_lecture"
+                app:title="@string/bookmarked" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

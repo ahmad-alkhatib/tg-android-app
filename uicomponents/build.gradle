@@ -1,0 +1,18 @@
+apply from: '../centeralized.gradle'
+apply from: '../dependencies/dagger.gradle'
+apply from: '../dependencies/kotlin.gradle'
+
+dependencies {
+    api project(Modules.apirequests)
+    api project(Modules.utilities)
+
+    api Dependencies.frag_nav_ctrl
+    api Dependencies.material_design_new
+    api Dependencies.android_multiDex
+    api Dependencies.viewmodel_extension
+    api Dependencies.android_appcompat
+    api Dependencies.android_constraint_layout
+    api Dependencies.android_legacy_support
+
+
+}

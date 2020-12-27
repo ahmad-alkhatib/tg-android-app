@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/large">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        style="@style/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large"
+        android:layout_marginTop="@dimen/extra_larger"
+        android:layout_marginEnd="@dimen/large"
+        android:text="@string/options"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        style="@style/textRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large"
+        android:layout_marginTop="@dimen/general_large"
+        android:layout_marginEnd="@dimen/large"
+        android:text="@string/please_select_one_of_the_options"
+        android:textAlignment="center" />
+
+
+    <View
+        style="@style/themeDivider"
+        android:layout_marginTop="@dimen/extra_large" />
+
+    <TextView
+        android:id="@+id/editProfileBtn"
+        style="@style/buttonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="@drawable/button_transparent_bg"
+        android:padding="@dimen/larger_custom"
+        android:text="@string/edit_profile"
+        android:textColor="@color/colorPrimary" />
+
+    <View style="@style/themeDivider" />
+
+    <TextView
+        android:id="@+id/settingsBtn"
+        style="@style/buttonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="@drawable/button_transparent_bg"
+        android:padding="@dimen/larger_custom"
+        android:text="@string/settings"
+        android:textColor="@color/colorPrimary" />
+
+    <View style="@style/themeDivider" />
+
+    <TextView
+        android:id="@+id/changePasswordBtn"
+        style="@style/buttonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="@drawable/button_transparent_bg"
+        android:padding="@dimen/larger_custom"
+        android:text="@string/change_password"
+        android:textColor="@color/colorPrimary" />
+
+    <View style="@style/themeDivider" />
+
+
+    <TextView
+        android:id="@+id/logoutBtn"
+        style="@style/buttonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:background="@drawable/button_transparent_bg"
+        android:padding="@dimen/larger_custom"
+        android:text="@string/log_out"
+        android:textColor="@color/colorRed" />
+
+    <View style="@style/themeDivider" />
+</LinearLayout>

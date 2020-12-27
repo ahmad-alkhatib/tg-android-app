@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackgroundBlue">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.5"
+        app:layout_constraintBottom_toBottomOf="@id/headerView"
+        app:layout_constraintTop_toTopOf="@id/headerView"
+        app:srcCompat="@drawable/app_logo" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large"
+        android:layout_marginTop="@dimen/general"
+        android:layout_marginEnd="@dimen/large"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:srcCompat="@drawable/splash_design" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/window_bg_round_corner"
+        android:orientation="vertical"
+        android:elevation="@dimen/extra_larger"
+        android:paddingStart="@dimen/extra_larger"
+        android:paddingTop="@dimen/extra_larger"
+        android:paddingEnd="@dimen/extra_larger"
+        android:paddingBottom="@dimen/extra_large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1">
+
+        <app.core.custom.CustomEditText
+            android:id="@+id/editEmail"
+            style="@style/ediTextLayoutStyle"
+            android:layout_marginTop="0dp"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            app:backgroundRounded="true"
+            app:errorTextMessage="@string/please_enter_a_valid_email_address"
+            app:hintText="@string/email"
+            app:startIcon="@drawable/icon_email" />
+
+        <app.core.custom.CustomEditText
+            android:id="@+id/editPassword"
+            style="@style/ediTextLayoutStyle"
+            android:imeOptions="actionDone"
+            android:inputType="textPassword"
+            app:backgroundRounded="true"
+            app:errorTextMessage="@string/please_enter_your_password"
+            app:hintText="@string/password"
+            app:startIcon="@drawable/icon_password" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginButton"
+            style="@style/buttonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_pink_bg"
+            android:text="@string/login" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/forgotPasswordButton"
+            style="@style/actionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/smaller"
+            android:text="@string/forgot_password" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginFacebookBtn"
+                style="@style/buttonTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/button_facebook_bg"
+                android:text="@string/login_with_facebook" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/extra_larger"
+                app:srcCompat="@drawable/icon_facebook" />
+        </RelativeLayout>
+
+        <View
+            style="@style/themeDivider"
+            android:layout_marginTop="@dimen/larger_custom"
+            android:layout_marginBottom="@dimen/general_large" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/registerAccountBtn"
+            style="@style/buttonTheme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register_new_account" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <app.core.custom.TopHeader
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showRightIcon="true"
+        app:transparent="true" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

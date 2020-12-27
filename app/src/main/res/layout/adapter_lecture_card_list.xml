@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/larger_custom"
+    android:layout_marginTop="@dimen/general_large"
+    android:layout_marginEnd="@dimen/larger_custom"
+    android:layout_marginBottom="@dimen/extra_large"
+    android:elevation="@dimen/card_elevation"
+    app:cardCornerRadius="@dimen/card_elevation"
+    app:cardElevation="@dimen/card_elevation">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/large">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/itemImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/list_item_lecture_image_height"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image_placeholder_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/itemTv"
+            style="@style/textListItemMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large"
+            android:layout_marginTop="@dimen/large"
+            android:layout_marginEnd="@dimen/general_large"
+            android:maxLines="2"
+            android:text="sdk fjklsajdflk ksdljfklsaj dkfljskladjf klsjadfkljsadlkfj kalsjf lkdsj fklsksdj fkajskdlfj alkssdlkfjaklsjdf"
+            app:layout_constraintEnd_toStartOf="@+id/bookmarkIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemImage" />
+
+        <TextView
+            android:id="@+id/dateTv"
+            style="@style/textDateMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large"
+            android:layout_marginTop="@dimen/smaller"
+            android:layout_marginEnd="@dimen/large"
+            android:maxLines="1"
+            android:text="17 JUNE 2020"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemTv" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bookmarkIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/general_large"
+            android:layout_marginEnd="@dimen/general_large"
+            android:padding="@dimen/small"
+            android:src="@drawable/icon_bookmark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itemImage" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

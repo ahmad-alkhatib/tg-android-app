@@ -1,0 +1,9 @@
+include ':apirequests'
+include ':core'
+include ':daos'
+include ':di'
+include ':preferences'
+include ':uicomponents'
+include ':utilities'
+include ':app'
+rootProject.name = "Tolerance Gate"

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GlobalAttrDeclare">
+        <attr name="text" format="string" />
+        <attr name="hintText" format="string" />
+        <attr name="errorTextMessage" format="string" />
+        <attr name="title" format="string" />/>
+        <attr name="active" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomEditText">
+        <attr name="text" />
+        <attr name="hintText" />
+        <attr name="errorTextMessage" />
+        <attr name="className" format="string" />
+        <attr name="screenTitle" format="string" />
+        <attr name="dropdownPicker" format="boolean" />
+        <attr name="backgroundRounded" format="boolean" />
+        <attr name="multiline" format="boolean" />
+        <attr name="multiSelection" format="boolean" />
+        <attr name="showCurrency" format="boolean" />
+        <attr name="optional" format="boolean" />
+        <attr name="hideStartIcon" format="boolean" />
+        <attr name="startIcon" format="reference" />
+        <attr name="endIcon" format="reference" />
+        <attr name="android:inputType" />
+        <attr name="android:imeOptions" />
+        <attr name="android:maxLength" />
+    </declare-styleable>
+
+    <declare-styleable name="TopHeader">
+        <attr name="title" />
+        <attr name="transparent" format="boolean" />
+        <attr name="showLeftIcon" format="boolean" />
+        <attr name="showRightIcon" format="boolean" />
+        <attr name="hideStatusBar" format="boolean" />
+        <attr name="leftIcon" format="reference" />
+        <attr name="rightIcon" format="reference" />
+        <attr name="android:tint" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomActionView">
+        <attr name="text" />
+        <attr name="url" format="string" />
+        <attr name="hideIcon" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomActionBtn">
+        <attr name="active" />
+        <attr name="icon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomFollowBtn">
+        <attr name="active" />
+        <attr name="following" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomStatusView">
+        <attr name="active" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomRecyclerView">
+        <attr name="title" />
+        <attr name="text" />
+        <attr name="actionText" format="string" />
+        <attr name="userPlaceholder" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomSettingToggle">
+        <attr name="text" />
+    </declare-styleable>
+</resources>

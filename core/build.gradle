@@ -1,0 +1,14 @@
+apply from: '../centeralized.gradle'
+apply from: '../dependencies/dagger.gradle'
+apply from: '../dependencies/kotlin.gradle'
+
+dependencies {
+//    api project(Modules.di)
+    api project(Modules.uicomponents)
+//    api project(Modules.analytics)
+//    api project(Modules.logger)
+//    api project(Modules.locale)
+
+//    implementation Dependencies.lottie
+//    implementation Dependencies.google_map
+}

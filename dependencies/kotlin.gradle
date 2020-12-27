@@ -1,0 +1,4 @@
+dependencies {
+    implementation Dependencies.kotlin_stdlib_jdk
+    implementation Dependencies.kotlin_core_ktx
+}

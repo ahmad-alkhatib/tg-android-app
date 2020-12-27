@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackgroundWhite"
+    android:orientation="vertical">
+
+    <app.core.custom.TopHeader
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hideStatusBar="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showLeftIcon="true"
+        app:title="@string/search_filters" />
+
+    <TextView
+        style="@style/textRegular"
+        android:layout_margin="@dimen/large"
+        android:text="@string/use_the_below_fields_to_filter_your_search_further_to_get_more_refined_results." />
+
+    <app.core.custom.CustomEditText
+        android:id="@+id/editCountry"
+        style="@style/ediTextLayoutStyle"
+        android:layout_marginStart="@dimen/large"
+        android:layout_marginEnd="@dimen/large"
+        android:visibility="gone"
+        app:className="@string/class_country"
+        app:dropdownPicker="true"
+        app:errorTextMessage="@string/please_select_a_country"
+        app:hintText="@string/country"
+        app:screenTitle="@string/country"
+        app:startIcon="@drawable/icon_country"
+        tools:visibility="visible" />
+
+    <app.core.custom.CustomEditText
+        android:id="@+id/editCity"
+        style="@style/ediTextLayoutStyle"
+        android:layout_marginStart="@dimen/large"
+        android:layout_marginEnd="@dimen/large"
+        android:visibility="gone"
+        app:className="@string/class_city"
+        app:dropdownPicker="true"
+        app:errorTextMessage="@string/please_select_a_city"
+        app:hintText="@string/city"
+        app:screenTitle="@string/city"
+        app:startIcon="@drawable/icon_city_pin"
+        tools:visibility="visible" />
+
+    <app.core.custom.CustomEditText
+        android:id="@+id/editSubject"
+        style="@style/ediTextLayoutStyle"
+        android:layout_marginStart="@dimen/large"
+        android:layout_marginEnd="@dimen/large"
+        android:visibility="gone"
+        app:className="@string/class_subject"
+        app:dropdownPicker="true"
+        app:errorTextMessage="@string/please_select_the_subject_taught"
+        app:hintText="@string/subject"
+        app:multiSelection="true"
+        app:screenTitle="@string/subject"
+        app:startIcon="@drawable/icon_subject_search"
+        tools:visibility="visible" />
+
+
+    <RadioGroup
+        android:id="@+id/segmentGroup"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/segment_height"
+        android:layout_marginLeft="@dimen/large"
+        android:layout_marginTop="@dimen/medium"
+        android:layout_marginRight="@dimen/large"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/newToOldRadioBtn"
+            style="@style/segmentButton"
+            android:background="@drawable/segmented_btn_left"
+            android:checked="true"
+            android:text="@string/newest_to_oldest" />
+
+        <RadioButton
+            android:id="@+id/oldToNewRadioBtn"
+            style="@style/segmentButton"
+            android:background="@drawable/segmented_btn_right"
+            android:fontFamily="@font/bold_arabic"
+            android:text="@string/oldest_to_newest" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/searchBtn"
+        style="@style/buttonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large"
+        android:layout_marginTop="@dimen/large"
+        android:layout_marginEnd="@dimen/large"
+        android:background="@drawable/button_primary_bg_rounded"
+        android:text="@string/search" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/clearBtn"
+        style="@style/buttonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large"
+        android:layout_marginTop="@dimen/large"
+        android:layout_marginEnd="@dimen/large"
+        android:layout_marginBottom="@dimen/double_larger_custom"
+        android:background="@drawable/button_pink_bg_rounded_regular"
+        android:text="@string/clear" />
+
+</LinearLayout>

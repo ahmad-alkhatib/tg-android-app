@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <app.core.custom.TopHeader
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hideStatusBar="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackgroundWhite"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/large"
+            android:layout_marginRight="@dimen/large"
+            android:orientation="vertical">
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editTitle"
+                style="@style/ediTextLayoutStyle"
+                android:layout_marginTop="@dimen/larger_custom"
+                android:inputType="textCapWords"
+                app:errorTextMessage="@string/please_enter_the_title"
+                app:hideStartIcon="true"
+                app:hintText="@string/course_title"
+                app:screenTitle="@string/add_course" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/courseBannerImageCard"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/large"
+                android:elevation="0dp"
+                app:cardCornerRadius="@dimen/corner_radius"
+                app:cardElevation="0dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/courseBannerImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/banner_height"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/image_placeholder" />
+            </androidx.cardview.widget.CardView>
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editLanguage"
+                style="@style/ediTextLayoutStyle"
+                app:className="@string/language"
+                app:dropdownPicker="true"
+                app:errorTextMessage="@string/please_select_a_language"
+                app:hideStartIcon="true"
+                app:hintText="@string/language"
+                app:screenTitle="@string/add_course" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editSubject"
+                style="@style/ediTextLayoutStyle"
+                app:className="@string/class_subject"
+                app:dropdownPicker="true"
+                app:errorTextMessage="@string/please_select_the_subject_taught"
+                app:hideStartIcon="true"
+                app:hintText="@string/subject_taught"
+                app:screenTitle="@string/add_course" />
+
+            <app.core.custom.CustomEditText
+                android:id="@+id/editDescription"
+                style="@style/ediTextLayoutStyle"
+                android:inputType="textCapSentences"
+                app:errorTextMessage="@string/please_enter_the_description"
+                app:hideStartIcon="true"
+                app:hintText="@string/description"
+                app:multiline="true"
+                app:screenTitle="@string/add_course" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchActive"
+                style="@style/textTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/editText_height"
+                android:layout_marginStart="@dimen/general"
+                android:layout_marginTop="@dimen/general_large"
+                android:background="@null"
+                android:text="@string/active"
+                android:thumb="@drawable/switch_thumb"
+                app:switchPadding="@dimen/large"
+                app:track="@drawable/switch_track" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addCourseBtn"
+                style="@style/buttonTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/large"
+                android:layout_marginBottom="@dimen/extra_large"
+                android:background="@drawable/button_primary_bg_rounded"
+                android:text="@string/add_course" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

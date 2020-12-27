@@ -1,0 +1,14 @@
+<resources>
+    <string name="parse_application_id">qNKcTdv6AqgvA8y5rLxbBCGQI0SUZzeUG92BJU8I</string>
+    <string name="parse_client_key">awx3Qv1bFh42Scy24Du2h0pjQRgCVI0NT5zCiDrz</string>
+    <string name="parse_server_path">https://parseapi.back4app.com</string>
+    <string name="api_base_url">https://parseapi.back4app.com/debug</string>
+
+<!--    <string name="parse_application_id">gl6nHzbxJlqSDfQ6KrLsrhr2v09nYwilyLpO3xRe</string>-->
+<!--    <string name="parse_client_key">18Vt2muog1esCGfE3x4Mmmhfop8aj8Arf22JjyFX</string>-->
+<!--    <string name="parse_server_path">https://parseapi.back4app.com</string>-->
+<!--    <string name="api_base_url">https://parseapi.back4app.com/debug</string>-->
+
+    <string name="facebook_app_id" translatable="false">298030241282179</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb298030241282179</string>
+</resources>

@@ -1,0 +1,15 @@
+apply from: '../centeralized.gradle'
+apply from: '../dependencies/dagger.gradle'
+apply from: '../dependencies/kotlin.gradle'
+
+dependencies {
+    api project(Modules.preferences)
+    api project(Modules.di)
+    api project(Modules.daos)
+    api Dependencies.parse_sdk
+
+    implementation Dependencies.okhttp3
+    implementation Dependencies.okhttp3_nterceptor
+    implementation Dependencies.retrofit_gson
+    implementation Dependencies.retrofit
+}

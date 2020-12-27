@@ -1,0 +1,3 @@
+apply from: '../centeralized.gradle'
+apply from: '../dependencies/dagger.gradle'
+apply from: '../dependencies/kotlin.gradle'
